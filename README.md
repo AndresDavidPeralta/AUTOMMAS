@@ -7,7 +7,7 @@ End-to-end pipeline for *AUTOMMAS: Automating Test Case Generation from User Man
 pipeline_v2/
 ├── README.md                       # This file
 ├── constants.py                    # Central configuration
-├── pdf_chunked.py                  # PDF → 1-page chunks
+├── pdf_chunked.py                  # PDF -> 1-page chunks
 ├── data_split.py                   # 70/30 stratified split
 ├── model.py                        # Qwen2.5-VL wrapper (Phase 1)
 ├── extract_use_cases.py            # Use Case extraction (was extract_macros.py)
