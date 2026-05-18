@@ -1,7 +1,6 @@
 ## Project Structure
 
 ```
-pipeline_v2/
 ├── README.md                       # This file
 ├── constants.py                    # Central configuration
 ├── pdf_chunked.py                  # PDF -> 1-page chunks
