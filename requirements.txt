@@ -1,0 +1,38 @@
+# requirements.txt — Complete pipeline (Phase 1 + Phase 2 + Baselines)
+# Install with:  pip install -r requirements.txt
+#
+# IMPORTANT: llama-cpp-python must be built WITH CUDA support for
+# all-GPU-layer offloading on the H200. Install it FIRST, alone:
+#
+#   CMAKE_ARGS="-DGGML_CUDA=on" pip install --no-cache-dir llama-cpp-python
+#
+# Then install everything else:
+#
+#   pip install -r requirements.txt
+
+# ─── Phase 1: Multimodal extraction (Qwen2.5-VL via transformers) ──────
+torch>=2.3.0
+transformers>=4.49.0
+accelerate>=0.30.0
+qwen-vl-utils>=0.0.8
+
+# ─── Phase 2 Generator + Validator + Phase 1 OCR Baseline ──────────────
+# All three use llama-cpp-python now (NOT transformers).
+# Pre-install above with CUDA support; line below is a guard.
+llama-cpp-python>=0.3.0
+
+# ─── Phase 1 Baseline: PaddleOCR ───────────────────────────────────────
+paddlepaddle-gpu>=2.6.0
+paddleocr>=2.7.0
+
+# ─── Frontier baselines (executed on separate machine by collaborator) ─
+google-generativeai>=0.7.0
+openai>=1.40.0
+
+# ─── PDF processing ────────────────────────────────────────────────────
+PyMuPDF>=1.24.0
+
+# ─── Data ──────────────────────────────────────────────────────────────
+pandas>=2.2.0
+numpy>=1.26.0
+Pillow>=10.0.0
