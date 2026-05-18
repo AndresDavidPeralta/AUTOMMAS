@@ -1,6 +1,3 @@
-# Pipelice:
-End-to-end pipeline for *AUTOMMAS: Automating Test Case Generation from User Manuals via Multi-Agent Systems* (SBES 2026).
-
 ## Project Structure
 
 ```
